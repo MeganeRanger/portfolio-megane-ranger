@@ -7,5 +7,7 @@
 [Lien Github Project](https://github.com/users/MeganeRanger/projects/2)
 
 ## Type de navigateur
+Multipage
 
 ## Choix de la composante Vue.js
+Compteur de compétences animées
