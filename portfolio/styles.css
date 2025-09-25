@@ -2,6 +2,7 @@ body {
     background-color: #EBE1D1;
 }
 
+/*header*/
 .nav-bar {
    position: fixed;
    top: 0;
@@ -18,13 +19,16 @@ body {
 a {
     font-size: 25px;
     color: #EBE1D1;
-    font-family: ;
+    font-family: 'Abril';
     text-decoration: none;
 }
 
-/*Fonts*/
+a:hover {
+    color: white;
+}
 
+/*Fonts*/
 @font-face {
     font-family: 'Abril';
-    src: url('./Fonts/');
+    src: url('/Fonts/AbrilFatface-Regular.ttf');
 }
