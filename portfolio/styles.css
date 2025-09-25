@@ -1,10 +1,10 @@
 body {
-    background-color: #EBE1D1;
+    background-color: #D3C3B2;
 }
 
-/*header*/
+/*Header*/
 .nav-bar {
-   position: fixed;
+   /*position: fixed; enlève la possibiliter de naviger*/
    top: 0;
    left: 0;
    width: 100%;
@@ -27,8 +27,42 @@ a:hover {
     color: white;
 }
 
+/*Contenu*/
+
+.biographie {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+}
+
+.image-moi {
+    margin-top: 150px;
+    margin-left: 150px;
+    width: 300px;
+    height: 450px;
+    background-color: white;
+    border-radius: 150px 150px 0 0;
+}
+
+.description-moi {
+    margin-top: 230px;
+    margin-left: 150px;
+    width: 600px;
+    height: 300px;
+    background-color: #EBE1D1;
+    font-size: 25px;
+    font-family: 'Noto';
+    color: #815423;
+    text-align: center;
+}
+
 /*Fonts*/
 @font-face {
     font-family: 'Abril';
-    src: url('/Fonts/AbrilFatface-Regular.ttf');
+    src: url('/Fonts/Abril_Fatface/AbrilFatface-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Noto';
+    src: url('/Fonts/static/NotoSansDisplay-Regular.ttf');
 }
