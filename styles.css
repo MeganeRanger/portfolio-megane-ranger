@@ -8,6 +8,7 @@ body {
     background-color: #D3C3B2;
 }
 
+
 /*Header*/
 .nav-bar {
     text-align: center;
@@ -59,24 +60,24 @@ h1 {
 .biographie {
     display: flex;
     flex-direction: row;
+    margin-top: 10%;
 }
 
 .image-moi {
-    margin-left: 150px;
-    width: 300px;
-    height: 450px;
+    max-width: 300px;
+    max-height: auto;
     background-color: white;
     border-radius: 150px 150px 0 0;
 }
 
 .description-moi {
     margin-top: 60px;
-    margin-left: 150px;
+    margin-left: 3vw;
     padding: 40px;
-    width: 600px;
-    height: 300px;
+    max-width: 800px;
+    max-height: auto;
     background-color: #EBE1D1;
-    font-size: 25px;
+    font-size: clamp(15px, 2vw, 25px);
     font-family: 'Noto';
     color: #815423;
     text-align: center;
@@ -85,10 +86,8 @@ h1 {
 .design-graphique p {
     display: flex;
     background-color: #815423;
-    width: 280px;
+    max-width: 280px;
     height: 80px;
-    margin-top: -90px;
-    margin-left: 750px;
     padding: 10px 30px;
     color: white;
     font-size: 25px;
@@ -101,12 +100,36 @@ h1 {
 h2 {
     text-align: center;
     font-size: 50px;
-    margin-top: 150px;
+    padding-top: 15%;
+    padding-bottom: 5%;
     color: #815423;
     font-family: 'Abril';
 }
 
+.projet-1 {
+    max-width: 400px;
+    max-height: auto;
+    background-color: #815423;
+    padding: 150px;
+    border-radius: 60px 0 60px 0;
+    margin-left: 2vw;
+}
 
+.projet-2 {
+    max-width: 400px;
+    max-height: auto;
+    background-color: #815423;
+    padding: 150px;
+    border-radius: 60px 0 60px 0;
+}
+
+.projet-3 {
+    max-width: 400px;
+    max-height: auto;
+    background-color: #815423;
+    padding: 150px;
+    border-radius: 60px 0 60px 0;
+}
 
 /*Fonts*/
 @font-face {
