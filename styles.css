@@ -10,37 +10,30 @@ body {
 
 
 /*Header*/
-.nav-bar {
-    text-align: center;
-    font-size: 25px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+.navbar-custom {
     background-color: #815423;
-    padding: 20px 30px;
-}
+  }
 
-.nav-bar ul {
-    list-style: none;
-    display: flex;
-    gap: 25px;
-    margin: 0;
-    padding: 0;
-}
-
-.nav-bar ul li a {
-    text-decoration: none;
+  .navbar-custom .nav-link,
+  .navbar-custom .navbar-brand {
+    font-size: 20px;
     color: #D3C3B2;
-    font-weight: 500;
-    transition: color 0.3s ease;
-    align-items: center;
     font-weight: bold;
-}
-
-.nav-bar ul li a:hover {
+  }
+  
+  .navbar-custom .nav-link:hover,
+  .navbar-custom .nav-link.active {
     color: white;
-}
+  }
+  
+  /* Pour garder l'icône burger blanche */
+  .navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.5);
+  }
+  
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.8)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  }
 
 .logo {
     width: 70px;
@@ -106,6 +99,8 @@ h2 {
     font-family: 'Abril';
 }
 
+
+
 .projet-1 {
     max-width: 400px;
     max-height: auto;
@@ -140,4 +135,10 @@ h2 {
 @font-face {
     font-family: 'Noto';
     src: url('/Fonts/static/NotoSansDisplay-Regular.ttf');
+}
+
+
+/*version mobile*/
+@media (max-width: 639px) {
+
 }
