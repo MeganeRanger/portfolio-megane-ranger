@@ -44,7 +44,7 @@ body {
 
 h1 {
     font-size: 60px;
-    margin-left: 5vw;
+    margin-left: 3vw;
     margin-top: 100px;
     color:#815423;
     font-family: 'Abril';
@@ -115,6 +115,26 @@ h2 {
     padding: 150px;
     border-radius: 60px 0 60px 0;
 }
+
+
+.btn-custom {
+    background-color: #815423;
+    margin-top: 5%;
+    color: #ffffff;
+    border: none;
+    width: 30%;
+    font-size: clamp(15px, 2vw, 25px);
+    font-family: 'Noto';
+  }
+  
+  .btn-custom:hover {
+    background-color: #6e451d; /* une teinte légèrement plus foncée au hover */
+    color: #ffffff;
+  }
+  
+
+/*page projets*/
+
 
 /*Fonts*/
 @font-face {
