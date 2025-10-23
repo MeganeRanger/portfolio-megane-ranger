@@ -1,59 +1,59 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projets</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projets</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!--nav-bar bootstrap menu burger-->
-    <nav class="navbar navbar-expand-lg navbar-custom">
-        <div class="container-fluid">
-            <img class="logo" src="./images/logo_portfolio.png">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="./index.html">Accueil</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./projets.html">Projets</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./index.html">À propos</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-    </nav>
-<!-- Vue App -->
-<div id="app" class="container my-5">
+  <!-- Barre de navigation Bootstrap -->
+  <nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container-fluid">
+      <img class="logo" src="./images/logo_portfolio.png" alt="Logo">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="./index.html">Accueil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="./projets.html">Projets</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./index.html#apropos">À propos</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Application Vue -->
+  <div id="app" class="container my-5">
 
     <h2 class="text-center mb-4">Mes projets</h2>
 
-  <!-- Boutons de filtre -->
-<div class="text-center mb-4">
-    <button 
-      v-for="cat in categories"
-      :key="cat"
-      @click="selectedCategory = cat"
-      :class="[
-        'btn', 
-        'mx-1',
-        selectedCategory === cat ? 'btn-custom' : 'btn-custom-outline'
-      ]"
-    >
-      {{ cat }}
-    </button>
-  </div>
-  
-  
+    <!-- Boutons de filtre -->
+    <div class="text-center mb-4">
+      <button 
+        v-for="cat in categories"
+        :key="cat"
+        @click="selectedCategory = cat"
+        :class="[
+          'btn', 
+          'mx-1',
+          selectedCategory === cat ? 'btn-custom' : 'btn-custom-outline'
+        ]"
+      >
+        {{ cat }}
+      </button>
+    </div>
+
     <!-- Liste des projets -->
     <div class="row">
       <div 
@@ -61,47 +61,60 @@
         v-for="project in filteredProjects" 
         :key="project.id"
       >
-        <div class="card h-100">
-          <img :src="project.image" class="card-img-top" :alt="project.title">
-          <div class="card-body">
-            <h5 class="card-title">{{ project.title }}</h5>
-            <p class="card-text">{{ project.category }}</p>
-          </div>
+        <div class="card h-100 shadow-sm border-0">
+          <a :href="'projet.html?proj-id=' + project.id" class="text-decoration-none text-dark">
+            <img :src="project.image" class="card-img-top" :alt="project.title">
+            <div class="card-body">
+              <h5 class="card-title">{{ project.title }}</h5>
+              <p class="card-text">{{ project.category }}</p>
+            </div>
+          </a>
         </div>
       </div>
     </div>
+
   </div>
+
+  <!-- Scripts -->
   <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
-<script>
-const { createApp } = Vue;
+  <script>
+    const { createApp } = Vue;
 
-createApp({
-  data() {
-    return {
-      selectedCategory: 'Tout',
-      categories: ['Tout', 'Web', 'Design graphique'],
-      projects: [
-        { id: 1, title: 'Inspectop - En cours...', category: 'Web', image: './images/logo_inspectop.png' },
-        { id: 2, title: 'Portrait - 2022', category: 'Design graphique', image: './images/projet_portrait_01.png' },
-        { id: 4, title: 'Portfolio Mégane - 2025', category: 'Web', image: './images/logo_portfolio.png' },
-        { id: 5, title: 'Générique de film - 2022', category: 'Design graphique', image: './images/generique_05.png' },
-       
-      ]
-    }
-  },
-  computed: {
-    filteredProjects() {
-      if (this.selectedCategory === 'Tout') {
-        return this.projects;
+    createApp({
+      data() {
+        return {
+          selectedCategory: 'Tout',
+          categories: ['Tout', 'Web', 'Design graphique'],
+          projects: [] // ✅ Initialisation
+        }
+      },
+      computed: {
+        filteredProjects() {
+          if (this.selectedCategory === 'Tout') {
+            return this.projects;
+          }
+          return this.projects.filter(p => p.category === this.selectedCategory);
+        }
+      },
+      mounted() {
+        // ✅ Chargement du fichier JSON
+        fetch('./projects.json')
+          .then(response => {
+            if (!response.ok) {
+              throw new Error("Erreur de chargement du fichier JSON");
+            }
+            return response.json();
+          })
+          .then(data => {
+            this.projects = data; // On stocke les projets chargés
+          })
+          .catch(error => {
+            console.error("Erreur :", error);
+          });
       }
-      return this.projects.filter(p => p.category === this.selectedCategory);
-    }
-  }
-}).mount('#app');
-</script>
+    }).mount('#app');
+  </script>
 
-
-  
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

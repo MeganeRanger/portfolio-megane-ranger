@@ -1,0 +1,69 @@
+[
+    {
+      "id": 1,
+      "title": "Inspectop - En cours...",
+      "category": "Web",
+      "course": "Projet de développement Web avancé - 2025",
+      "team": "Projet Individuel",
+      "image": "./images/logo_inspectop.png",
+      "shortDescription": "Inspectop est une application web professionnelle dédiée à la gestion des inspections techniques de bâtiments.",
+      "longDescription": "Ce projet a été réalisé pour un client professionnel afin de créer une application web complète permettant d’automatiser les rapports d’inspection et de centraliser la gestion des données. Le projet a été entièrement réalisé par moi, en prenant en charge la conception, le développement front-end et l’intégration des fonctionnalités spécifiques demandées par le client. L’attention a été portée à l’expérience utilisateur et à la sécurité des données, avec l’ajout de fonctionnalités avancées comme un système de notifications en temps réel et une interface mobile.",
+      "media": {
+        "images": ["./images/inspectop_dashboard.png", "./images/inspectop_mobile.png"]
+      },
+      "role": "Développement Front-End, intégration de l’interface utilisateur, conception UX/UI.",
+      "tools": ["Vue.js", "Bootsrap", "Visual Studio Code", "Canva"]
+    },
+    {
+        "id": 2,
+        "title": "Portrait - 2022",
+        "category": "Design graphique",
+        "course": "Atelier d'illustration numérique - 2022",
+        "team": "Projet individuel",
+        "teammates": [],
+        "image": "./images/projet_portrait_01.png",
+        "shortDescription": "Le but de ce projet était de récréer des images vectorielles qui nous représentent.",
+        "longDescription": "Pour concevoir ce projet, l'utilisation de Photoshop était demandée. L'enseignante nous a demandé de créer des images vectorielles qui nous représentent, incluant une photo de nous-mêmes en version vectorielle. J'ai choisi de représenter mes intérêts personnels : ma série préférée, mon plat préféré, mes jeux vidéo favoris et mes animaux préférés, en les intégrant dans la composition vectorielle.",
+        "media": {
+          "images": ["./images/projet_portrait_02.png", "./images/projet_portrait_03.png"]
+        },
+        "role": "Conception et création complète du projet.",
+        "tools": ["Adobe Photoshop"]
+    },
+    {
+      "id": 4,
+      "title": "Portfolio Mégane - 2025",
+      "category": "Web",
+      "course": "Projet personnel - Portfolio de fin d’études",
+      "team": "Projet individuel",
+      "teammates": [],
+      "image": "./images/logo_portfolio.png",
+      "shortDescription": "Portfolio personnel présentant mes projets en design graphique et développement web.",
+      "longDescription": "Ce projet personnel a été conçu comme portfolio de fin d’études. L’objectif était de créer un site web moderne, responsive et minimaliste, qui présente mes travaux de manière claire et professionnelle. J’ai intégré des animations légères et un système de filtrage interactif des projets en utilisant Vue.js. L’ensemble du site a été designé et codé de A à Z.",
+      "media": {
+        "images": ["./images/portfolio_home.png", "./images/portfolio_projects.png"],
+        "videos": []
+      },
+      "role": "Conception complète, design UI, développement front-end.",
+      "tools": ["HTML5", "CSS3", "Vue.js", "Figma"]
+    },
+    {
+        "id": 5,
+        "title": "Générique de film - 2022",
+        "category": "Design graphique",
+        "course": "Atelier d'illustration numérique - 2022",
+        "team": "Projet individuel",
+        "teammates": [],
+        "image": "./images/generique_05.png",
+        "shortDescription": "Création d'un générique d'un film inventé.",
+        "longDescription": "Les directives du cours étaient de créer 12 génériques pour des films inventés. L'utilisation de techniques vectorielles était obligatoire pour ce projet. J'ai décidé de créer le générique d'un film d'investigation, en utilisant un style graphique rétro et synthwave, avec des typographies animées et des transitions visuelles marquées. Le projet met en avant l'atmosphère du film, en combinant couleurs, effets de lumière et composition dynamique des éléments graphiques.",
+        "media": {
+          "images": ["./images/generique_scene_01.png", "./images/generique_scene_02.png"],
+          "videos": ["./videos/generique_final.mp4"],
+          "process": ["./images/generique_process_01.png", "./images/generique_process_02.png", "./images/generique_process_03.png"]
+        },
+        "role": "Conception et création complète du projet, montage et animation du générique.",
+        "tools": ["Adobe Photoshop", "Vectorielle"]
+    }
+  ]
+  
