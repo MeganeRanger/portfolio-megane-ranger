@@ -38,21 +38,22 @@
 
     <h2 class="text-center mb-4">Mes projets</h2>
 
-    <!-- Boutons de filtre -->
-    <div class="text-center mb-4">
-      <button 
-        v-for="cat in categories"
-        :key="cat"
-        @click="selectedCategory = cat"
-        :class="[
-          'btn', 
-          'mx-1',
-          selectedCategory === cat ? 'btn-custom' : 'btn-custom-outline'
-        ]"
-      >
-        {{ cat }}
-      </button>
-    </div>
+<!-- Boutons de filtre -->
+<div class="text-center mb-4 boutons-filtre">
+  <button 
+    v-for="cat in categories"
+    :key="cat"
+    @click="selectedCategory = cat"
+    :class="[
+      'filtre-btn-base',
+      selectedCategory === cat ? 'filtre-btn-actif' : 'filtre-btn'
+    ]"
+  >
+    {{ cat }}
+  </button>
+</div>
+
+
 
     <!-- Liste des projets -->
     <div class="row">

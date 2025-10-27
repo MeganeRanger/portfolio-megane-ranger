@@ -16,9 +16,11 @@ body {
 
   .navbar-custom .nav-link,
   .navbar-custom .navbar-brand {
-    font-size: 20px;
+    font-size: 25px;
+    text-align: center;
     color: #D3C3B2;
     font-weight: bold;
+    font-family: 'Abil';
   }
   
   .navbar-custom .nav-link:hover,
@@ -48,6 +50,7 @@ h1 {
     margin-top: 100px;
     color:#815423;
     font-family: 'Abril';
+    
 }
 
 .biographie {
@@ -57,10 +60,13 @@ h1 {
 }
 
 .image-moi {
-    max-width: 450px;
+    max-width: 400px;
     max-height: auto;
     background-color: white;
-    border-radius: 220px 220px 0 0;
+    border-radius: 220px 220px 0 0 ;
+    object-fit: cover;
+    box-shadow: 0px 0px 20px 0px rgba(129, 84, 35, 0.75); 
+
 }
 
 .description-moi {
@@ -74,6 +80,12 @@ h1 {
     font-family: 'Noto';
     color: #815423;
     text-align: center;
+    box-shadow: 0px 0px 20px 0px rgba(129, 84, 35, 0.75); 
+
+}
+
+.description-moi:hover {
+  transform: scale(1.05);
 }
 
 
@@ -89,49 +101,115 @@ h2 {
 }
 
 
-
-
-.projet-1 {
-    max-width: 400px;
-    max-height: auto;
-    background-color: #815423;
-    padding: 150px;
-    border-radius: 60px 0 60px 0;
-    margin-left: 2vw;
+/* Section projets */
+.projets {
+  margin-top: 5%;
 }
 
-.projet-2 {
-    max-width: 400px;
-    max-height: auto;
-    background-color: #815423;
-    padding: 150px;
-    border-radius: 60px 0 60px 0;
+/* Lien des projets */
+.projet-lien {
+  text-decoration: none;
+  display: block;
+  border-radius: 60px 0 60px 0;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0px 0px 20px 0px rgba(129, 84, 35, 0.75); /* #815423 + opacité */
+
 }
 
-.projet-3 {
-    max-width: 400px;
-    max-height: auto;
-    background-color: #815423;
-    padding: 150px;
-    border-radius: 60px 0 60px 0;
+/* Image de projet */
+.projet-image {
+  width: 100%;
+  height: 350px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 60px 0 60px 0;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.25);
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
 }
+
+/* Effet hover */
+.projet-lien:hover .projet-image {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(129, 84, 35, 0.5);
+  filter: brightness(1.05);
+}
+
 
 
 .btn-custom {
-    background-color: #815423;
-    margin-top: 5%;
-    color: #ffffff;
-    border: none;
-    width: 40%;
-    font-size: clamp(15px, 2vw, 25px);
-    font-family: 'Noto';
+  font-family: 'Noto', sans-serif;
+  font-weight: 600;
+  font-size: clamp(20px, 1.5vw, 18px);
+  padding: 0.6rem 1.5rem;
+  border-radius: 30px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(145deg, #EBE1D1, #D3C3B2);
+  color: #5c3b1a;
+  border: 2px solid #b89b7a;
   }
   
   .btn-custom:hover {
-    background-color: #6e451d; /* une teinte légèrement plus foncée au hover */
-    color: #ffffff;
+    background: linear-gradient(145deg, #D3C3B2, #EBE1D1);
+    transform: translateY(-2px);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   }
   
+/*page projets*/
+ /* Conteneur */
+.boutons-filtre {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.8rem;
+  margin-bottom: 3rem;
+}
+
+/* Base des boutons */
+.filtre-btn-base {
+  font-family: 'Noto', sans-serif;
+  font-weight: 600;
+  font-size: clamp(14px, 1.5vw, 18px);
+  padding: 0.6rem 1.5rem;
+  border-radius: 30px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Bouton inactif */
+.filtre-btn {
+  background: linear-gradient(145deg, #EBE1D1, #D3C3B2);
+  color: #5c3b1a;
+  border: 2px solid #b89b7a;
+}
+
+.filtre-btn:hover {
+  background: linear-gradient(145deg, #D3C3B2, #EBE1D1);
+  transform: translateY(-2px);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Bouton actif */
+.filtre-btn-actif {
+  background: linear-gradient(145deg, #815423, #6e451d);
+  color: #fff;
+  border: 2px solid #6e451d;
+  box-shadow: 0px 4px 15px rgba(129, 84, 35, 0.4);
+}
+
+.filtre-btn-actif:hover {
+  background: linear-gradient(145deg, #6e451d, #5b3717);
+  transform: translateY(-3px);
+}
+
+
 
 /*Fonts*/
 @font-face {
