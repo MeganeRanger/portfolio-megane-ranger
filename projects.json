@@ -41,8 +41,8 @@
       "shortDescription": "Portfolio personnel présentant mes projets en design graphique et développement web.",
       "longDescription": "Ce projet personnel a été conçu comme portfolio de fin d’études. L’objectif était de créer un site web moderne, responsive et minimaliste, qui présente mes travaux de manière claire et professionnelle. J’ai intégré des animations légères et un système de filtrage interactif des projets en utilisant Vue.js. L’ensemble du site a été designé et codé de A à Z.",
       "media": {
-        "images": ["./images/portfolio_home.png", "./images/portfolio_projects.png"],
-        "videos": []
+        "images": ["./images/portfolio_home.png", "./images/portfolio_projects.png"]
+     
       },
       "role": "Conception complète, design UI, développement front-end.",
       "tools": ["HTML5", "CSS3", "Vue.js", "Figma"]
@@ -58,9 +58,8 @@
         "shortDescription": "Création d'un générique d'un film inventé.",
         "longDescription": "Les directives du cours étaient de créer 12 génériques pour des films inventés. L'utilisation de techniques vectorielles était obligatoire pour ce projet. J'ai décidé de créer le générique d'un film d'investigation, en utilisant un style graphique rétro et synthwave, avec des typographies animées et des transitions visuelles marquées. Le projet met en avant l'atmosphère du film, en combinant couleurs, effets de lumière et composition dynamique des éléments graphiques.",
         "media": {
-          "images": ["./images/generique_scene_01.png", "./images/generique_scene_02.png"],
-          "videos": ["./videos/generique_final.mp4"],
-          "process": ["./images/generique_process_01.png", "./images/generique_process_02.png", "./images/generique_process_03.png"]
+          "images": ["./images/generique_01.png", "./images/generique_02.png", "./images/generique_03.png", "./images/generique_04.png", "./images/generique_05.png", "./images/generique_06.png", "./images/generique_07.png", "./images/generique_08.png", "./images/generique_09.png", "./images/generique_10.png", "./images/generique_11.png", "./images/generique_12.png"],
+          "process": ["./images/Moodboard.png"]
         },
         "role": "Conception et création complète du projet, montage et animation du générique.",
         "tools": ["Adobe Photoshop", "Vectorielle"]
